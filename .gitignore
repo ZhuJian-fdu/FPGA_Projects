@@ -1,0 +1,13 @@
+# Ignore Vivado project directories
+**/vivado_project/
+
+# Vivado temporary files
+**/.Xil/
+*.jou
+*.log
+*.str
+
+# Simulation output files
+*.wdb
+*.vcd
+*.vpd
