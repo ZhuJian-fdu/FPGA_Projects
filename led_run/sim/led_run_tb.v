@@ -9,12 +9,22 @@ module led_run_tb(
     wire [7:0]led_2;
     wire [7:0]led_3;
 
-    led_run_v1 u_led_run_v1(
+    // led_run_v1 u_led_run_v1(
+    //     .clk(clk),
+    //     .rst_n(rst_n),
+    //     .led(led_1)
+    // );
+    // defparam u_led_run_v1.CNT_MAX = 25_000 - 1;
+
+    led_run_v1 
+    #(
+        .CNT_MAX(25_000 - 1)
+    )
+    u_led_run_v1(
         .clk(clk),
         .rst_n(rst_n),
         .led(led_1)
     );
-    defparam u_led_run_v1.CNT_MAX = 25_000 - 1;
 
     led_run_v2 u_led_run_v2(
         .clk(clk),
