@@ -8,10 +8,13 @@ module led_run_v3(
     output wire [7:0]led;
 
     reg [24:0] cnt;
+
+    parameter CNT_MAX = 25_000_000 - 1;
+
     always @(posedge clk or negedge rst_n) begin
         if(!rst_n)
             cnt <= 0;
-        else if(cnt == 25_000 - 1)
+        else if(cnt == CNT_MAX)
             cnt <= 0;
         else
             cnt <= cnt + 1'd1;
@@ -21,7 +24,7 @@ module led_run_v3(
     always @(posedge clk or negedge rst_n) begin
         if(!rst_n)
             cnt_a <= 0;
-        else if(cnt == 25_000 - 1)
+        else if(cnt == CNT_MAX)
             cnt_a <= cnt_a + 1'd1;
     end
 

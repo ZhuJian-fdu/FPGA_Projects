@@ -14,18 +14,21 @@ module led_run_tb(
         .rst_n(rst_n),
         .led(led_1)
     );
+    defparam u_led_run_v1.CNT_MAX = 25_000 - 1;
 
     led_run_v2 u_led_run_v2(
         .clk(clk),
         .rst_n(rst_n),
         .led(led_2)
     );
+    defparam u_led_run_v2.CNT_MAX = 25_000 - 1;
 
     led_run_v3 u_led_run_v3(
         .clk(clk),
         .rst_n(rst_n),
         .led(led_3)
     );
+    defparam u_led_run_v3.CNT_MAX = 25_000 - 1;
 
     initial clk = 1;
     always #10 clk = ~clk;
