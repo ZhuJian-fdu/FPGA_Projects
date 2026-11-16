@@ -7,6 +7,7 @@ module led_run_tb(
     reg rst_n;
     wire [7:0]led_1;
     wire [7:0]led_2;
+    wire [7:0]led_3;
 
     led_run_v1 u_led_run_v1(
         .clk(clk),
@@ -18,6 +19,12 @@ module led_run_tb(
         .clk(clk),
         .rst_n(rst_n),
         .led(led_2)
+    );
+
+    led_run_v3 u_led_run_v3(
+        .clk(clk),
+        .rst_n(rst_n),
+        .led(led_3)
     );
 
     initial clk = 1;
