@@ -59,6 +59,9 @@ module led_ctrl(
                     counter3 <= counter3 + 1;
                 end
             end
+            else begin
+                counter3 <= 0;
+            end
         end
     end
 

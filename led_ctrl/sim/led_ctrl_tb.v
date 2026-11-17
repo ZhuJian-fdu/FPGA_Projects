@@ -26,7 +26,7 @@ module led_ctrl_tb(
         #10_000_000;
         SW = 8'b1010_0011;
         #10_000_000;
-        $stop;
+        $finish;
     end
 
 endmodule
