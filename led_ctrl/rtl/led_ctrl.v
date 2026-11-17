@@ -2,13 +2,15 @@ module led_ctrl(
     clk,
     rst_n,
     led,
-    SW
+    SW,
+    round_done
 );
 
     input clk;
     input rst_n;
     input [7:0] SW;
     output reg led;
+    output round_done;
 
     reg [23:0] counter1;
     parameter MCNT1 = 12_500_000;
@@ -101,5 +103,8 @@ module led_ctrl(
             end
         end
     end
+
+
+    assign round_done = counter1 == MCNT1 - 1 && counter2 == 7 && encounter1 == 1;
 
 endmodule
