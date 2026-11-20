@@ -1,0 +1,31 @@
+set_property PACKAGE_PIN Y18 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+
+set_property PACKAGE_PIN B21 [get_ports rst_n]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_n]
+
+set_property PACKAGE_PIN G22 [get_ports data[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[0]]
+set_property PACKAGE_PIN D22 [get_ports data[1]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[1]]
+set_property PACKAGE_PIN E22 [get_ports data[2]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[2]] 
+set_property PACKAGE_PIN G21 [get_ports data[3]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[3]]
+set_property PACKAGE_PIN E21 [get_ports data[4]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[4]]
+set_property PACKAGE_PIN D21 [get_ports data[5]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[5]]
+set_property PACKAGE_PIN C22 [get_ports data[6]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[6]]
+set_property PACKAGE_PIN B22 [get_ports data[7]]
+set_property IOSTANDARD LVCMOS33 [get_ports data[7]]
+
+set_property PACKAGE_PIN M15 [get_ports uart_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
+
+set_property PACKAGE_PIN F15 [get_ports send_go]
+set_property IOSTANDARD LVCMOS33 [get_ports send_go]
+
+set_property PACKAGE_PIN M22 [get_ports tx_done]
+set_property IOSTANDARD LVCMOS33 [get_ports tx_done]

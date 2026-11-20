@@ -46,7 +46,7 @@ module uart_byte_tx_univ(
         if(!rst_n) begin
             en_baud_cnt <= 0;
         end
-        else if(send_go) begin
+        else if(!send_go) begin
             en_baud_cnt <= 1'b1;
         end
         else if(w_tx_done) begin
@@ -73,7 +73,7 @@ module uart_byte_tx_univ(
         if(!rst_n) begin
             r_data <= 0;
         end
-        else if(send_go) begin
+        else if(!send_go) begin
             r_data <= data;
         end
         else begin
